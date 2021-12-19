@@ -27,7 +27,7 @@ export default class Application extends EventEmitter {
     // return modifiedMonkeys;
 
     // })
-    console.log(monkeys)
+    
     const m1 = monkeys[0] + this.emojis[0]
     const m2 = monkeys[1] + this.emojis[1]
     const m3 = monkeys[2] + this.emojis[2]
@@ -50,7 +50,7 @@ export default class Application extends EventEmitter {
 }
 
 
-const newApp = new Application();
-newApp.setEmojis(["🐒", "🦍", "🦧"]);
-newApp.addBananas(["monke1", "monkey2", "monkey3"]);
+// const newApp = new Application();
+// newApp.setEmojis(["🐒", "🦍", "🦧"]);
+// newApp.addBananas(["monke1", "monkey2", "monkey3"]);
 
