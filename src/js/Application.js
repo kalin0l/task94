@@ -20,30 +20,37 @@ export default class Application extends EventEmitter {
     this.emojis = emojis;
   }
 
-  addBananas(monkeys) {
+  addBananas(emojis) {
     // monkeys.map((monkey,i) => {
     //   modifiedMonkeys = monkey[i] + this.emojis[i];
     //   console.log(modifiedMonkeys)
     // return modifiedMonkeys;
 
     // })
+    const monkeyWithBanana = emojis.map(monkey => {
+      return monkey + this.banana;
+    })
     
-    const m1 = monkeys[0] + this.emojis[0]
-    const m2 = monkeys[1] + this.emojis[1]
-    const m3 = monkeys[2] + this.emojis[2]
-    console.log(m1, m2, m3);
+    console.log(monkeyWithBanana);
+    
     const div = document.querySelector('.main');
-    const emojis = document.querySelector('#emojis');
-    const pTag = document.createElement("p");
-    const pTag1 = document.createElement("p");
-    const pTag2 = document.createElement("p");
-    pTag.textContent = m1;
-    pTag1.textContent = m2;
-    pTag2.textContent = m3;
-    div.removeChild(emojis);
-    div.appendChild(pTag);
-    div.appendChild(pTag1);
-    div.appendChild(pTag2);
+    const emojis1 = document.querySelector('#emojis');
+    div.removeChild(emojis1);
+
+    monkeyWithBanana.forEach(el => {
+      const p = document.createElement("p");
+      p.textContent = `${el}`
+      div.appendChild(p);
+    })
+    // const pTag = document.createElement("p");
+    // const pTag1 = document.createElement("p");
+    // const pTag2 = document.createElement("p");
+    // pTag.textContent = m1;
+    // pTag1.textContent = m2;
+    // pTag2.textContent = m3;
+    // div.appendChild(pTag);
+    // div.appendChild(pTag1);
+    // div.appendChild(pTag2);
 
   }
 
